@@ -15,19 +15,20 @@ namespace H1_19012021_OpgavehaefteCsharp
     {
         protected void Fejl(string beskrivelse, string convert)
         {
-            if (convert == "ToDouble")
-            {
-                
-            }
-
             try
             {
-                Console.WriteLine(beskrivelse);
-                
+                if (convert == "ToDouble")
+                {
+                    Convert.ToDouble(convert);
+                }
+                else if (convert == "ToInt32")
+                {
+                    Convert.ToInt32(convert);
+                }
             }
             catch (Exception)
             {
-                
+                Console.WriteLine("Fejl");
             }
         }
     }
@@ -83,6 +84,7 @@ namespace H1_19012021_OpgavehaefteCsharp
 
                             while (true)
                             {
+                                
                                 try
                                 {
                                     Console.WriteLine("Intast decimaltal i Fahrenheit");
